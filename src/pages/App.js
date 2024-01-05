@@ -21,8 +21,9 @@ import {
     const [appId, setAppId] = useState(""); // 存储 App ID 的状态
     const [channel, setChannel] = useState(""); // 存储频道名的状态
     const [token, setToken] = useState(""); // 存储 Token 的状态
+    const abd = useState(false);
   
-    // 使用 App ID、频道名和 Token 加入频道，是否加入频道取决于 calling 的状态
+    // 使用 App ID、频道名和 Token 加入频道，是否加入频道取决于 calling 的状态 for free
     useJoin({appid: appId, channel: channel, token: token ? token : null}, calling);
 
     // 本地用户
